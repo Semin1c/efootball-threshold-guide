@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastCheck": "2026-09-28T22:28:23.718255+00:00",
+  "lastCheck": "2026-09-28T22:29:29.995177+00:00",
   "lastAddition": "2026-09-28T22:28:23.718255+00:00",
   "health": "partial",
   "checks": [
@@ -59,49 +59,49 @@
       "source": "https://www.reddit.com/r/Amadeusz/comments/1qazew3/an_ingame_test_and_rebuttal_of_the_ball_control/",
       "url": "https://www.reddit.com/r/Amadeusz/comments/1qazew3/an_ingame_test_and_rebuttal_of_the_ball_control/",
       "ok": false,
-      "error": "Cannot isolate original Reddit post; manual source review needed"
+      "error": "HTTP Error 403: Blocked"
     },
     {
       "source": "https://www.reddit.com/r/Amadeusz/comments/1qzagsh/the_defensive_awareness_threshold_that_affects/",
       "url": "https://www.reddit.com/r/Amadeusz/comments/1qzagsh/the_defensive_awareness_threshold_that_affects/",
       "ok": false,
-      "error": "Cannot isolate original Reddit post; manual source review needed"
+      "error": "HTTP Error 403: Blocked"
     },
     {
       "source": "https://www.reddit.com/r/Amadeusz/comments/1rmfc7d/a_mustknow_for_player_builds_the_acceleration/",
       "url": "https://www.reddit.com/r/Amadeusz/comments/1rmfc7d/a_mustknow_for_player_builds_the_acceleration/",
       "ok": false,
-      "error": "Cannot isolate original Reddit post; manual source review needed"
+      "error": "HTTP Error 403: Blocked"
     },
     {
       "source": "https://www.reddit.com/r/Amadeusz/comments/1sw6161/the_threshold_for_heading_is_89/",
       "url": "https://www.reddit.com/r/Amadeusz/comments/1sw6161/the_threshold_for_heading_is_89/",
       "ok": false,
-      "error": "Cannot isolate original Reddit post; manual source review needed"
+      "error": "HTTP Error 403: Blocked"
     },
     {
       "source": "https://www.reddit.com/r/Amadeusz/comments/1t5jdak/is_the_threshold_for_offensive_awareness_actually/",
       "url": "https://www.reddit.com/r/Amadeusz/comments/1t5jdak/is_the_threshold_for_offensive_awareness_actually/",
       "ok": false,
-      "error": "Cannot isolate original Reddit post; manual source review needed"
+      "error": "HTTP Error 403: Blocked"
     },
     {
       "source": "https://www.reddit.com/r/Amadeusz/comments/1vzxseo/is_there_really_no_difference_between_96_and_99/",
       "url": "https://www.reddit.com/r/Amadeusz/comments/1vzxseo/is_there_really_no_difference_between_96_and_99/",
       "ok": false,
-      "error": "Cannot isolate original Reddit post; manual source review needed"
+      "error": "HTTP Error 403: Blocked"
     },
     {
       "source": "https://www.reddit.com/r/Amadeusz/comments/1w0un07/the_speed_stat_benefit_table_complete_edition/",
       "url": "https://www.reddit.com/r/Amadeusz/comments/1w0un07/the_speed_stat_benefit_table_complete_edition/",
       "ok": false,
-      "error": "Cannot isolate original Reddit post; manual source review needed"
+      "error": "HTTP Error 403: Blocked"
     },
     {
       "source": "https://www.reddit.com/r/efootballtactics/comments/1wmjvwo/revealing_a_threshold_i_discovered/",
       "url": "https://www.reddit.com/r/efootballtactics/comments/1wmjvwo/revealing_a_threshold_i_discovered/",
       "ok": false,
-      "error": "Cannot isolate original Reddit post; manual source review needed"
+      "error": "HTTP Error 403: Blocked"
     }
   ],
   "claims": [
