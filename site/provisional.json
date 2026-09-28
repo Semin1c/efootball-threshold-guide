@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "lastCheck": "2026-09-28T22:28:23.718255+00:00",
+  "lastAddition": "2026-09-28T22:28:23.718255+00:00",
+  "health": "partial",
+  "checks": [
+    {
+      "source": "Amadeusz discovery feed",
+      "url": "https://www.reddit.com/r/Amadeusz/new/.rss",
+      "ok": true
+    },
+    {
+      "source": "KONAMI news discovery",
+      "url": "https://www.konami.com/efootball/en/",
+      "ok": true
+    },
+    {
+      "source": "https://www.konami.com/efootball/en-us/page/v6/versioninfo_v6-00",
+      "url": "https://www.konami.com/efootball/en-us/page/v6/versioninfo_v6-00",
+      "ok": true
+    },
+    {
+      "source": "https://www.konami.com/efootball/en-us/topic/news/5632",
+      "url": "https://www.konami.com/efootball/en-us/topic/news/5632",
+      "ok": false,
+      "error": "Source blocked or extraction incomplete"
+    },
+    {
+      "source": "https://www.konami.com/efootball/en/topic/news/5552",
+      "url": "https://www.konami.com/efootball/en/topic/news/5552",
+      "ok": false,
+      "error": "Source blocked or extraction incomplete"
+    },
+    {
+      "source": "https://www.konami.com/efootball/en/topic/news/5553",
+      "url": "https://www.konami.com/efootball/en/topic/news/5553",
+      "ok": false,
+      "error": "Source blocked or extraction incomplete"
+    },
+    {
+      "source": "https://www.konami.com/efootball/en/topic/news/5625",
+      "url": "https://www.konami.com/efootball/en/topic/news/5625",
+      "ok": false,
+      "error": "Source blocked or extraction incomplete"
+    },
+    {
+      "source": "https://www.konami.com/efootball/en/topic/news/5879",
+      "url": "https://www.konami.com/efootball/en/topic/news/5879",
+      "ok": false,
+      "error": "Source blocked or extraction incomplete"
+    },
+    {
+      "source": "https://www.konami.com/efootball/en/topic/news/5888",
+      "url": "https://www.konami.com/efootball/en/topic/news/5888",
+      "ok": false,
+      "error": "Source blocked or extraction incomplete"
+    },
+    {
+      "source": "https://www.reddit.com/r/Amadeusz/comments/1qazew3/an_ingame_test_and_rebuttal_of_the_ball_control/",
+      "url": "https://www.reddit.com/r/Amadeusz/comments/1qazew3/an_ingame_test_and_rebuttal_of_the_ball_control/",
+      "ok": false,
+      "error": "Cannot isolate original Reddit post; manual source review needed"
+    },
+    {
+      "source": "https://www.reddit.com/r/Amadeusz/comments/1qzagsh/the_defensive_awareness_threshold_that_affects/",
+      "url": "https://www.reddit.com/r/Amadeusz/comments/1qzagsh/the_defensive_awareness_threshold_that_affects/",
+      "ok": false,
+      "error": "Cannot isolate original Reddit post; manual source review needed"
+    },
+    {
+      "source": "https://www.reddit.com/r/Amadeusz/comments/1rmfc7d/a_mustknow_for_player_builds_the_acceleration/",
+      "url": "https://www.reddit.com/r/Amadeusz/comments/1rmfc7d/a_mustknow_for_player_builds_the_acceleration/",
+      "ok": false,
+      "error": "Cannot isolate original Reddit post; manual source review needed"
+    },
+    {
+      "source": "https://www.reddit.com/r/Amadeusz/comments/1sw6161/the_threshold_for_heading_is_89/",
+      "url": "https://www.reddit.com/r/Amadeusz/comments/1sw6161/the_threshold_for_heading_is_89/",
+      "ok": false,
+      "error": "Cannot isolate original Reddit post; manual source review needed"
+    },
+    {
+      "source": "https://www.reddit.com/r/Amadeusz/comments/1t5jdak/is_the_threshold_for_offensive_awareness_actually/",
+      "url": "https://www.reddit.com/r/Amadeusz/comments/1t5jdak/is_the_threshold_for_offensive_awareness_actually/",
+      "ok": false,
+      "error": "Cannot isolate original Reddit post; manual source review needed"
+    },
+    {
+      "source": "https://www.reddit.com/r/Amadeusz/comments/1vzxseo/is_there_really_no_difference_between_96_and_99/",
+      "url": "https://www.reddit.com/r/Amadeusz/comments/1vzxseo/is_there_really_no_difference_between_96_and_99/",
+      "ok": false,
+      "error": "Cannot isolate original Reddit post; manual source review needed"
+    },
+    {
+      "source": "https://www.reddit.com/r/Amadeusz/comments/1w0un07/the_speed_stat_benefit_table_complete_edition/",
+      "url": "https://www.reddit.com/r/Amadeusz/comments/1w0un07/the_speed_stat_benefit_table_complete_edition/",
+      "ok": false,
+      "error": "Cannot isolate original Reddit post; manual source review needed"
+    },
+    {
+      "source": "https://www.reddit.com/r/efootballtactics/comments/1wmjvwo/revealing_a_threshold_i_discovered/",
+      "url": "https://www.reddit.com/r/efootballtactics/comments/1wmjvwo/revealing_a_threshold_i_discovered/",
+      "ok": false,
+      "error": "Cannot isolate original Reddit post; manual source review needed"
+    }
+  ],
+  "claims": [
+    {
+      "id": "2c11eaa3d34a33a24d1574b9",
+      "confidence": "provisional",
+      "discoveredAt": "2026-09-28T22:28:23.718255+00:00",
+      "sourcePublishedAt": null,
+      "sourceUrl": "https://www.konami.com/efootball/en-us/page/v6/versioninfo_v6-00",
+      "sourceType": "official",
+      "title": "Potential dribbling finding",
+      "attributeIds": [
+        "dribbling"
+      ],
+      "excerpt": "・ Added dribbling motions and revised how existing motions are selected so that players' movements will look more natural",
+      "engineMention": "v6.0.0",
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "51a33169a36eb94eb31b6ad5",
+      "confidence": "provisional",
+      "discoveredAt": "2026-09-28T22:28:23.718255+00:00",
+      "sourcePublishedAt": "2026-09-24T11:20:53+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1woyy77/power_tackle_pack_initial_builds_review/",
+      "sourceType": "community-feed",
+      "title": "Potential tackling finding",
+      "attributeIds": [
+        "tackling"
+      ],
+      "excerpt": "… close-quarters, tight-marking situations, where it triggers an animation of using the body to bump the opponent and win the",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "12c75f9ffb847d0ac52666c2",
+      "confidence": "provisional",
+      "discoveredAt": "2026-09-28T22:28:23.718255+00:00",
+      "sourcePublishedAt": "2026-09-24T17:12:14+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1wp7hyp/happygametimewei_power_tackle_the_signature_move/",
+      "sourceType": "community-feed",
+      "title": "Potential balance finding",
+      "attributeIds": [
+        "balance"
+      ],
+      "excerpt": "… comes with a \"shoulder check\" or body-barge animation where the defender seals off the lane and shoves the attacker",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "8b18c00d6886fff778793033",
+      "confidence": "provisional",
+      "discoveredAt": "2026-09-28T22:28:23.718255+00:00",
+      "sourcePublishedAt": "2026-09-25T13:30:30+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1wpwev9/power_tackle_vs_longreach_tackle/",
+      "sourceType": "community-feed",
+      "title": "Potential tackling finding",
+      "attributeIds": [
+        "tackling"
+      ],
+      "excerpt": "… Power Tackle doesn't just have one single animation set; it can trigger in various physical duel situations.",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "3fd482a9cbc21d6a899327d9",
+      "confidence": "provisional",
+      "discoveredAt": "2026-09-28T22:28:23.718255+00:00",
+      "sourcePublishedAt": "2026-09-25T16:34:49+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1wq11wr/power_tackle_bonucci_review_slow_acceleration_but/",
+      "sourceType": "community-feed",
+      "title": "Potential acceleration finding",
+      "attributeIds": [
+        "acceleration"
+      ],
+      "excerpt": "… it still won't reach the manager's +3 threshold, completely killing any idea of stacking acceleration on him.",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "konami-v6",
+      "url": "https://www.konami.com/efootball/en-us/page/v6/versioninfo_v6-00",
+      "purpose": "Confirms new movement, kick and goalkeeper animations. Does not publish numeric attribute breakpoints."
+    },
+    {
+      "id": "konami-mobile",
+      "url": "https://www.konami.com/efootball/en/topic/news/5625",
+      "purpose": "New trapping motions and changed action selection; a reason to retest old ball-control claims."
+    },
+    {
+      "id": "konami-stamina",
+      "url": "https://www.konami.com/efootball/en-us/topic/news/5632",
+      "purpose": "Changes stamina use for Long Ball Counter and halftime recovery for centre backs. No stamina cutoff supplied."
+    },
+    {
+      "id": "speed-final",
+      "url": "https://www.reddit.com/r/Amadeusz/comments/1w0un07/the_speed_stat_benefit_table_complete_edition/",
+      "purpose": "Reports an off-ball efficiency change at 90 and lower, nonzero returns from 96 to 99. Not a dribbling-speed cap."
+    },
+    {
+      "id": "speed-correction",
+      "url": "https://www.reddit.com/r/Amadeusz/comments/1vzxseo/is_there_really_no_difference_between_96_and_99/",
+      "purpose": "A more precise follow-up corrects the apparent plateau in half-pitch frame timing. Training groups and on-ball effects still matter."
+    },
+    {
+      "id": "acceleration",
+      "url": "https://www.reddit.com/r/Amadeusz/comments/1rmfc7d/a_mustknow_for_player_builds_the_acceleration/",
+      "purpose": "88 concerns stride frequency; 91 begins lower gains in the reported test. No current mobile retest verified."
+    },
+    {
+      "id": "awareness",
+      "url": "https://www.reddit.com/r/Amadeusz/comments/1t5jdak/is_the_threshold_for_offensive_awareness_actually/",
+      "purpose": "Older controlled test of the 90 awareness claim. Do not treat the acceleration effect as a positioning cap."
+    },
+    {
+      "id": "def-awareness",
+      "url": "https://www.reddit.com/r/Amadeusz/comments/1qzagsh/the_defensive_awareness_threshold_that_affects/",
+      "purpose": "Discusses a below-70 penalty in a specific state and explicitly retires the old 86 Tight Possession theory. Does not justify 70 for a defender."
+    },
+    {
+      "id": "heading",
+      "url": "https://www.reddit.com/r/Amadeusz/comments/1sw6161/the_threshold_for_heading_is_89/",
+      "purpose": "Revised from 90 to 89 after more testing. Reports a chance of an arched-back header, not guaranteed goals."
+    },
+    {
+      "id": "ball-control",
+      "url": "https://www.reddit.com/r/Amadeusz/comments/1qazew3/an_ingame_test_and_rebuttal_of_the_ball_control/",
+      "purpose": "Challenges the ball-control turning breakpoint theory and the reliability of the Skill Up test method."
+    },
+    {
+      "id": "balance",
+      "url": "https://www.reddit.com/r/efootballtactics/comments/1wmjvwo/revealing_a_threshold_i_discovered/",
+      "purpose": "A claim about evading tackles at 88. No controlled repeated protocol or independent replication verified here."
+    },
+    {
+      "id": "konami-news",
+      "url": "https://www.konami.com/efootball/en/",
+      "purpose": "Discover new official notices; changed navigation may create false positives."
+    },
+    {
+      "id": "amadeusz-new",
+      "url": "https://www.reddit.com/r/Amadeusz/new/",
+      "purpose": "Discover new tester reports; all new claims require review and may be blocked by Reddit."
+    }
+  ]
+}

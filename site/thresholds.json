@@ -1,0 +1,4540 @@
+{
+  "schemaVersion": 1,
+  "title": "eFootball 2027 · Threshold Field Guide",
+  "lastUpdated": "2026-09-27",
+  "lastSourceReview": "2026-09-27",
+  "engineBaseline": "v6.0.0",
+  "reviewScope": "Public-source review; no new gameplay experiments performed. Platform parity is not assumed.",
+  "positions": [
+    {
+      "id": "CF",
+      "name": "Centre forward",
+      "summary": "Finish moves, attack space.",
+      "note": "Use the upper Heading / Physical Contact ranges for a target man; lower them for a mobile finisher.",
+      "priorityAttributes": [
+        "offensive-awareness",
+        "finishing",
+        "speed",
+        "acceleration"
+      ]
+    },
+    {
+      "id": "SS",
+      "name": "Second striker",
+      "summary": "Link play, turn, arrive.",
+      "note": "Shift points between passing and finishing according to whether the card creates or attacks the box.",
+      "priorityAttributes": [
+        "ball-control",
+        "tight-possession",
+        "offensive-awareness",
+        "finishing"
+      ]
+    },
+    {
+      "id": "LWF",
+      "name": "Left wing forward",
+      "summary": "Carry wide, beat a marker.",
+      "note": "For an inside forward, favor finishing; for a touchline crosser, favor lofted pass and curl.",
+      "priorityAttributes": [
+        "dribbling",
+        "speed",
+        "acceleration",
+        "tight-possession"
+      ]
+    },
+    {
+      "id": "RWF",
+      "name": "Right wing forward",
+      "summary": "Carry wide, beat a marker.",
+      "note": "Match preferred foot to crossing or cutting inside; targets mirror LWF.",
+      "priorityAttributes": [
+        "dribbling",
+        "speed",
+        "acceleration",
+        "tight-possession"
+      ]
+    },
+    {
+      "id": "AMF",
+      "name": "Attacking midfielder",
+      "summary": "Receive between lines.",
+      "note": "A runner favors awareness and acceleration; a playmaker favors passing and tight possession.",
+      "priorityAttributes": [
+        "low-pass",
+        "tight-possession",
+        "ball-control",
+        "offensive-awareness"
+      ]
+    },
+    {
+      "id": "CMF",
+      "name": "Central midfielder",
+      "summary": "Connect both halves.",
+      "note": "Box-to-box players need more stamina and defending; orchestrators need more passing.",
+      "priorityAttributes": [
+        "low-pass",
+        "stamina",
+        "tight-possession",
+        "defensive-engagement"
+      ]
+    },
+    {
+      "id": "DMF",
+      "name": "Defensive midfielder",
+      "summary": "Screen, recover, distribute.",
+      "note": "An anchor favors awareness and duels; a deep distributor can spend more on passing.",
+      "priorityAttributes": [
+        "defensive-awareness",
+        "defensive-engagement",
+        "tackling",
+        "physical-contact"
+      ]
+    },
+    {
+      "id": "LB",
+      "name": "Left back",
+      "summary": "Defend the flank, support wide.",
+      "note": "An attacking fullback uses the upper crossing and stamina targets; a defensive one favors defending.",
+      "priorityAttributes": [
+        "speed",
+        "stamina",
+        "defensive-awareness",
+        "lofted-pass"
+      ]
+    },
+    {
+      "id": "RB",
+      "name": "Right back",
+      "summary": "Defend the flank, support wide.",
+      "note": "Same budget logic as LB; preferred foot and crossing role matter.",
+      "priorityAttributes": [
+        "speed",
+        "stamina",
+        "defensive-awareness",
+        "lofted-pass"
+      ]
+    },
+    {
+      "id": "CB",
+      "name": "Centre back",
+      "summary": "Protect space and win duels.",
+      "note": "A high line needs more recovery pace; aerial reach and awareness remain important.",
+      "priorityAttributes": [
+        "defensive-awareness",
+        "tackling",
+        "physical-contact",
+        "speed"
+      ]
+    },
+    {
+      "id": "GK",
+      "name": "Goalkeeper",
+      "summary": "Position, react, reach.",
+      "note": "Prioritize the three core keeper attributes, then handling. Height and reach affect comparisons.",
+      "priorityAttributes": [
+        "gk-awareness",
+        "gk-reflexes",
+        "gk-reach",
+        "gk-catching",
+        "gk-parrying",
+        "jumping"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "id": "offensive-awareness",
+      "name": "Offensive Awareness",
+      "group": "Attack",
+      "confidence": "provisional",
+      "threshold": {
+        "label": "90 · older-engine finding",
+        "values": [
+          90
+        ],
+        "scope": "Pre-v6; off-ball starting acceleration",
+        "note": "Older testing links 90 to off-ball acceleration; current v6 applicability remains unverified. Higher values can still matter for movement."
+      },
+      "practical": "Prioritize for runners and finishers; a static creator can trade some for passing.",
+      "sourceIds": [
+        "awareness"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "ball-control",
+      "name": "Ball Control",
+      "group": "Possession",
+      "confidence": "no-hard-threshold",
+      "threshold": {
+        "label": "No established hard threshold",
+        "values": [],
+        "scope": "No verified numeric v6 breakpoint",
+        "note": "Popular 90/95/99 animation claims are not established by the reviewed evidence."
+      },
+      "practical": "Improve first touches and receptions in traffic; judge with the same card and passing scenario.",
+      "sourceIds": [
+        "ball-control",
+        "konami-mobile"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "dribbling",
+      "name": "Dribbling",
+      "group": "Possession",
+      "confidence": "no-hard-threshold",
+      "threshold": {
+        "label": "No established hard threshold",
+        "values": [],
+        "scope": "No verified numeric v6 breakpoint",
+        "note": "Do not transfer the off-ball Speed curve to running with the ball."
+      },
+      "practical": "Fund ball carrying for wingers and creators; pace alone does not describe carrying ability.",
+      "sourceIds": [
+        "speed-correction",
+        "konami-v6"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "tight-possession",
+      "name": "Tight Possession",
+      "group": "Possession",
+      "confidence": "no-hard-threshold",
+      "threshold": {
+        "label": "86 / 91 are not current rules",
+        "values": [],
+        "scope": "No verified numeric v6 breakpoint",
+        "note": "The old turning-foot claim was explicitly retired. No replacement v6 number was verified."
+      },
+      "practical": "Use the range as a tight-space handling target, then test turns on the actual card.",
+      "sourceIds": [
+        "def-awareness",
+        "konami-mobile"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "low-pass",
+      "name": "Low Pass",
+      "group": "Passing",
+      "confidence": "heuristic",
+      "threshold": {
+        "label": "82–83 with Through Passing? Unverified",
+        "values": [],
+        "scope": "No verified numeric v6 breakpoint",
+        "note": "A circulated skill-based target, not a universal breakpoint. A current primary test of the exact multiplier and rounding was not verified; do not assume this produces 99 passing."
+      },
+      "practical": "For primary creators, prioritize reliable passing over chasing a cheap skill formula.",
+      "sourceIds": [
+        "editorial"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "lofted-pass",
+      "name": "Lofted Pass",
+      "group": "Passing",
+      "confidence": "heuristic",
+      "threshold": {
+        "label": "90 is a build target",
+        "values": [],
+        "scope": "No verified numeric v6 breakpoint",
+        "note": "No universal 90 cutoff or current Pinpoint Crossing percentage was verified."
+      },
+      "practical": "Raise for crossers and diagonal distributors; combine with suitable skills.",
+      "sourceIds": [
+        "editorial"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "finishing",
+      "name": "Finishing",
+      "group": "Attack",
+      "confidence": "heuristic",
+      "threshold": {
+        "label": "90 is a build target",
+        "values": [],
+        "scope": "No verified numeric v6 breakpoint",
+        "note": "90–95 is a practical finishing range, not an animation unlock or guarantee."
+      },
+      "practical": "Keep shooting angles, preferred foot and shot selection consistent when comparing builds.",
+      "sourceIds": [
+        "editorial"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "heading",
+      "name": "Heading",
+      "group": "Attack",
+      "confidence": "provisional",
+      "threshold": {
+        "label": "89 · older animation test",
+        "values": [
+          89
+        ],
+        "scope": "Pre-v6; attacking header animation",
+        "note": "A reported chance to use an arched-back attacking header; v6 changed motions, so retesting is needed."
+      },
+      "practical": "Worth considering for aerial strikers. Reach, timing and delivery still decide the contest.",
+      "sourceIds": [
+        "heading",
+        "konami-v6"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "set-piece-taking",
+      "name": "Set Piece Taking",
+      "group": "Set pieces",
+      "confidence": "heuristic",
+      "threshold": {
+        "label": "No universal target",
+        "values": [],
+        "scope": "No verified numeric v6 breakpoint",
+        "note": "Specialist investment only; no hard breakpoint established in this review."
+      },
+      "practical": "Choose a designated free-kick taker instead of spending on every player.",
+      "sourceIds": [
+        "editorial"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "curl",
+      "name": "Curl",
+      "group": "Set pieces",
+      "confidence": "heuristic",
+      "threshold": {
+        "label": "Role-dependent target",
+        "values": [],
+        "scope": "No verified numeric v6 breakpoint",
+        "note": "Claims of 80/90/94/98 unlocks were not validated."
+      },
+      "practical": "Useful for curl-shot and set-piece specialists; evaluate the relevant shot or cross.",
+      "sourceIds": [
+        "editorial"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "speed",
+      "name": "Speed",
+      "group": "Athleticism",
+      "confidence": "current-test",
+      "threshold": {
+        "label": "90 → 96 · lower returns at 96–99",
+        "values": [
+          90,
+          96,
+          99
+        ],
+        "scope": "International v6.0.0 off-ball test; mobile replication unverified",
+        "note": "The refined v6 test reports nonzero gains in 96–99, about one-third of the 90–96 rate. Returns increase again above 99. This is off-ball running, not a universal cap."
+      },
+      "practical": "Start around 90 for pace roles; spend toward 96 if affordable. Consider stamina and kicking power gained in the same training group.",
+      "sourceIds": [
+        "speed-final",
+        "speed-correction"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "acceleration",
+      "name": "Acceleration",
+      "group": "Athleticism",
+      "confidence": "provisional",
+      "threshold": {
+        "label": "88 / 91 · older-engine tests",
+        "values": [
+          88,
+          91
+        ],
+        "scope": "Pre-v6; off-ball first 18 metres",
+        "note": "88 was the stride-frequency breakpoint; gains became smaller from 91 in the older test. Current v6 replication was not verified."
+      },
+      "practical": "Value quick starts without treating 91 as a ceiling or sacrificing the whole build to reach it.",
+      "sourceIds": [
+        "acceleration",
+        "speed-final"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "kicking-power",
+      "name": "Kicking Power",
+      "group": "Athleticism",
+      "confidence": "no-hard-threshold",
+      "threshold": {
+        "label": "No established hard threshold",
+        "values": [],
+        "scope": "No verified numeric v6 breakpoint",
+        "note": "No verified rule that 91–94 is wasted or that 95 unlocks extra power."
+      },
+      "practical": "Useful for powerful shots and long distribution; consider the whole lower-body training group.",
+      "sourceIds": [
+        "editorial"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "jumping",
+      "name": "Jumping",
+      "group": "Athleticism",
+      "confidence": "no-hard-threshold",
+      "threshold": {
+        "label": "No established hard threshold",
+        "values": [],
+        "scope": "No verified numeric v6 breakpoint",
+        "note": "Height and body reach make one universal number misleading."
+      },
+      "practical": "Raise for aerial roles; compare players with similar height and contest context.",
+      "sourceIds": [
+        "editorial"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "physical-contact",
+      "name": "Physical Contact",
+      "group": "Athleticism",
+      "confidence": "no-hard-threshold",
+      "threshold": {
+        "label": "75 / 85 are not verified unlocks",
+        "values": [],
+        "scope": "No verified numeric v6 breakpoint",
+        "note": "This review did not establish a current shielding-animation threshold."
+      },
+      "practical": "Prioritize for hold-up play and duels; the player model and balance change how a build feels.",
+      "sourceIds": [
+        "editorial"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "balance",
+      "name": "Balance",
+      "group": "Athleticism",
+      "confidence": "provisional",
+      "threshold": {
+        "label": "88 · recent, unreplicated claim",
+        "values": [
+          88
+        ],
+        "scope": "2026-09 observation; exact version/platform unspecified",
+        "note": "A September observation claims easier tackle evasion at 88. Test controls and version/platform are insufficient for a current-test label."
+      },
+      "practical": "Treat 88 as something to test, not a mandatory rebuild instruction.",
+      "sourceIds": [
+        "balance"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "stamina",
+      "name": "Stamina",
+      "group": "Athleticism",
+      "confidence": "no-hard-threshold",
+      "threshold": {
+        "label": "No universal 90-minute cutoff",
+        "values": [],
+        "scope": "No verified numeric v6 breakpoint",
+        "note": "Role, pressing and team style change demand; v6 changed some stamina behavior."
+      },
+      "practical": "Use higher targets for constant runners; check the late-match bar in your own tactics.",
+      "sourceIds": [
+        "konami-stamina"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "defensive-awareness",
+      "name": "Defensive Awareness",
+      "group": "Defence",
+      "confidence": "provisional",
+      "threshold": {
+        "label": "70 · narrow older-state finding",
+        "values": [
+          70
+        ],
+        "scope": "Pre-v6; specific marking state",
+        "note": "An older test found a below-70 initial-acceleration penalty during marking. This is not a sufficient defender target or a verified v6 cutoff."
+      },
+      "practical": "Fund defensive positioning for defenders; use the recommended role range, not 70 as a stopping point.",
+      "sourceIds": [
+        "def-awareness",
+        "konami-v6"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "tackling",
+      "name": "Tackling",
+      "group": "Defence",
+      "confidence": "heuristic",
+      "threshold": {
+        "label": "90+ is a defensive target",
+        "values": [],
+        "scope": "No verified numeric v6 breakpoint",
+        "note": "No verified universal clean-tackle unlock."
+      },
+      "practical": "Prioritize for ball winners; tackle timing and approach angle still matter.",
+      "sourceIds": [
+        "editorial"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "aggression",
+      "name": "Aggression",
+      "group": "Defence",
+      "confidence": "heuristic",
+      "threshold": {
+        "label": "Role-dependent target",
+        "values": [],
+        "scope": "No verified numeric v6 breakpoint",
+        "note": "No verified hard threshold or universally optimal aggression number."
+      },
+      "practical": "Choose intensity to fit a pressing or positional role.",
+      "sourceIds": [
+        "editorial"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "defensive-engagement",
+      "name": "Defensive Engagement",
+      "group": "Defence",
+      "confidence": "heuristic",
+      "threshold": {
+        "label": "Role-dependent target",
+        "values": [],
+        "scope": "No verified numeric v6 breakpoint",
+        "note": "No verified numeric tracking-back threshold in this review."
+      },
+      "practical": "Value for midfield recovery work and consistent defensive participation.",
+      "sourceIds": [
+        "editorial"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "gk-awareness",
+      "name": "GK Awareness",
+      "group": "Goalkeeping",
+      "confidence": "no-hard-threshold",
+      "threshold": {
+        "label": "No verified hard threshold",
+        "values": [],
+        "scope": "No verified numeric v6 breakpoint",
+        "note": "v6 added goalkeeper motions. No universal 90/95 save-animation cutoff was verified."
+      },
+      "practical": "Prioritize positioning as a foundation alongside reflexes and reach.",
+      "sourceIds": [
+        "konami-v6",
+        "editorial"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "gk-catching",
+      "name": "GK Catching",
+      "group": "Goalkeeping",
+      "confidence": "no-hard-threshold",
+      "threshold": {
+        "label": "No verified hard threshold",
+        "values": [],
+        "scope": "No verified numeric v6 breakpoint",
+        "note": "v6 added goalkeeper motions. No universal 90/95 save-animation cutoff was verified."
+      },
+      "practical": "Improve handling; do not read a target as a guarantee of catching every shot.",
+      "sourceIds": [
+        "konami-v6",
+        "editorial"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "gk-parrying",
+      "name": "GK Parrying",
+      "group": "Goalkeeping",
+      "confidence": "no-hard-threshold",
+      "threshold": {
+        "label": "No verified hard threshold",
+        "values": [],
+        "scope": "No verified numeric v6 breakpoint",
+        "note": "v6 added goalkeeper motions. No universal 90/95 save-animation cutoff was verified."
+      },
+      "practical": "Budget for safer parries; assess where rebounds go in repeatable shot scenarios.",
+      "sourceIds": [
+        "konami-v6",
+        "editorial"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "gk-reflexes",
+      "name": "GK Reflexes",
+      "group": "Goalkeeping",
+      "confidence": "no-hard-threshold",
+      "threshold": {
+        "label": "No verified hard threshold",
+        "values": [],
+        "scope": "No verified numeric v6 breakpoint",
+        "note": "v6 added goalkeeper motions. No universal 90/95 save-animation cutoff was verified."
+      },
+      "practical": "Prioritize close-range reactions while retaining awareness and reach.",
+      "sourceIds": [
+        "konami-v6",
+        "editorial"
+      ],
+      "lastReviewed": "2026-09-27"
+    },
+    {
+      "id": "gk-reach",
+      "name": "GK Reach",
+      "group": "Goalkeeping",
+      "confidence": "no-hard-threshold",
+      "threshold": {
+        "label": "No verified hard threshold",
+        "values": [],
+        "scope": "No verified numeric v6 breakpoint",
+        "note": "v6 added goalkeeper motions. No universal 90/95 save-animation cutoff was verified."
+      },
+      "practical": "Judge together with keeper height and arm coverage; one number does not equal one save radius.",
+      "sourceIds": [
+        "konami-v6",
+        "editorial"
+      ],
+      "lastReviewed": "2026-09-27"
+    }
+  ],
+  "records": [
+    {
+      "position": "CF",
+      "attribute": "offensive-awareness",
+      "target": [
+        90,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "ball-control",
+      "target": [
+        85,
+        92
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "dribbling",
+      "target": [
+        83,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "tight-possession",
+      "target": [
+        83,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "low-pass",
+      "target": [
+        75,
+        83
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "lofted-pass",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "finishing",
+      "target": [
+        90,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "heading",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "set-piece-taking",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Only for your designated taker: consider 85–95. Otherwise retain the base value.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "curl",
+      "target": [
+        75,
+        85
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "speed",
+      "target": [
+        90,
+        96
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "acceleration",
+      "target": [
+        88,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "kicking-power",
+      "target": [
+        85,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "jumping",
+      "target": [
+        75,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "physical-contact",
+      "target": [
+        78,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "balance",
+      "target": [
+        83,
+        92
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "stamina",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "defensive-awareness",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "tackling",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "aggression",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "defensive-engagement",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "gk-awareness",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "gk-catching",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "gk-parrying",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "gk-reflexes",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CF",
+      "attribute": "gk-reach",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "offensive-awareness",
+      "target": [
+        88,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "ball-control",
+      "target": [
+        90,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "dribbling",
+      "target": [
+        88,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "tight-possession",
+      "target": [
+        88,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "low-pass",
+      "target": [
+        83,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "lofted-pass",
+      "target": [
+        75,
+        85
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "finishing",
+      "target": [
+        85,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "heading",
+      "target": [
+        65,
+        80
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "set-piece-taking",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Only for your designated taker: consider 85–95. Otherwise retain the base value.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "curl",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "speed",
+      "target": [
+        85,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "acceleration",
+      "target": [
+        88,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "kicking-power",
+      "target": [
+        83,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "jumping",
+      "target": [
+        65,
+        78
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "physical-contact",
+      "target": [
+        70,
+        83
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "balance",
+      "target": [
+        88,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "stamina",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "defensive-awareness",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "tackling",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "aggression",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "defensive-engagement",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "gk-awareness",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "gk-catching",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "gk-parrying",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "gk-reflexes",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "SS",
+      "attribute": "gk-reach",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "offensive-awareness",
+      "target": [
+        85,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "ball-control",
+      "target": [
+        88,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "dribbling",
+      "target": [
+        90,
+        96
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "tight-possession",
+      "target": [
+        88,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "low-pass",
+      "target": [
+        80,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "lofted-pass",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "finishing",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "heading",
+      "target": [
+        60,
+        75
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "set-piece-taking",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Only for your designated taker: consider 85–95. Otherwise retain the base value.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "curl",
+      "target": [
+        83,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "speed",
+      "target": [
+        90,
+        96
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "acceleration",
+      "target": [
+        90,
+        96
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "kicking-power",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "jumping",
+      "target": [
+        60,
+        75
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "physical-contact",
+      "target": [
+        68,
+        82
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "balance",
+      "target": [
+        88,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "stamina",
+      "target": [
+        85,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "defensive-awareness",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "tackling",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "aggression",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "defensive-engagement",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "gk-awareness",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "gk-catching",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "gk-parrying",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "gk-reflexes",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LWF",
+      "attribute": "gk-reach",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "offensive-awareness",
+      "target": [
+        85,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "ball-control",
+      "target": [
+        88,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "dribbling",
+      "target": [
+        90,
+        96
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "tight-possession",
+      "target": [
+        88,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "low-pass",
+      "target": [
+        80,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "lofted-pass",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "finishing",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "heading",
+      "target": [
+        60,
+        75
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "set-piece-taking",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Only for your designated taker: consider 85–95. Otherwise retain the base value.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "curl",
+      "target": [
+        83,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "speed",
+      "target": [
+        90,
+        96
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "acceleration",
+      "target": [
+        90,
+        96
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "kicking-power",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "jumping",
+      "target": [
+        60,
+        75
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "physical-contact",
+      "target": [
+        68,
+        82
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "balance",
+      "target": [
+        88,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "stamina",
+      "target": [
+        85,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "defensive-awareness",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "tackling",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "aggression",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "defensive-engagement",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "gk-awareness",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "gk-catching",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "gk-parrying",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "gk-reflexes",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RWF",
+      "attribute": "gk-reach",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "offensive-awareness",
+      "target": [
+        85,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "ball-control",
+      "target": [
+        90,
+        96
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "dribbling",
+      "target": [
+        85,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "tight-possession",
+      "target": [
+        90,
+        96
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "low-pass",
+      "target": [
+        88,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "lofted-pass",
+      "target": [
+        83,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "finishing",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "heading",
+      "target": [
+        60,
+        75
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "set-piece-taking",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Only for your designated taker: consider 85–95. Otherwise retain the base value.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "curl",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "speed",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "acceleration",
+      "target": [
+        85,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "kicking-power",
+      "target": [
+        83,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "jumping",
+      "target": [
+        60,
+        75
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "physical-contact",
+      "target": [
+        70,
+        83
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "balance",
+      "target": [
+        85,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "stamina",
+      "target": [
+        83,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "defensive-awareness",
+      "target": [
+        60,
+        75
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "tackling",
+      "target": [
+        55,
+        70
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "aggression",
+      "target": [
+        60,
+        75
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "defensive-engagement",
+      "target": [
+        65,
+        80
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "gk-awareness",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "gk-catching",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "gk-parrying",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "gk-reflexes",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "AMF",
+      "attribute": "gk-reach",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "offensive-awareness",
+      "target": [
+        75,
+        85
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "ball-control",
+      "target": [
+        85,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "dribbling",
+      "target": [
+        80,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "tight-possession",
+      "target": [
+        85,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "low-pass",
+      "target": [
+        88,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "lofted-pass",
+      "target": [
+        85,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "finishing",
+      "target": [
+        70,
+        83
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "heading",
+      "target": [
+        65,
+        80
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "set-piece-taking",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Only for your designated taker: consider 85–95. Otherwise retain the base value.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "curl",
+      "target": [
+        75,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "speed",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "acceleration",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "kicking-power",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "jumping",
+      "target": [
+        65,
+        80
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "physical-contact",
+      "target": [
+        75,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "balance",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "stamina",
+      "target": [
+        88,
+        96
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "defensive-awareness",
+      "target": [
+        75,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "tackling",
+      "target": [
+        75,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "aggression",
+      "target": [
+        75,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "defensive-engagement",
+      "target": [
+        80,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "gk-awareness",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "gk-catching",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "gk-parrying",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "gk-reflexes",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CMF",
+      "attribute": "gk-reach",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "offensive-awareness",
+      "target": [
+        60,
+        75
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "ball-control",
+      "target": [
+        78,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "dribbling",
+      "target": [
+        70,
+        80
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "tight-possession",
+      "target": [
+        78,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "low-pass",
+      "target": [
+        83,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "lofted-pass",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "finishing",
+      "target": [
+        55,
+        70
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "heading",
+      "target": [
+        78,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "set-piece-taking",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Only for your designated taker: consider 85–95. Otherwise retain the base value.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "curl",
+      "target": [
+        60,
+        78
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "speed",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "acceleration",
+      "target": [
+        78,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "kicking-power",
+      "target": [
+        78,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "jumping",
+      "target": [
+        78,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "physical-contact",
+      "target": [
+        85,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "balance",
+      "target": [
+        70,
+        85
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "stamina",
+      "target": [
+        85,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "defensive-awareness",
+      "target": [
+        90,
+        96
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "tackling",
+      "target": [
+        88,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "aggression",
+      "target": [
+        83,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "defensive-engagement",
+      "target": [
+        90,
+        96
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "gk-awareness",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "gk-catching",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "gk-parrying",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "gk-reflexes",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "DMF",
+      "attribute": "gk-reach",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "offensive-awareness",
+      "target": [
+        70,
+        83
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "ball-control",
+      "target": [
+        78,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "dribbling",
+      "target": [
+        78,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "tight-possession",
+      "target": [
+        75,
+        85
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "low-pass",
+      "target": [
+        78,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "lofted-pass",
+      "target": [
+        83,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "finishing",
+      "target": [
+        55,
+        70
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "heading",
+      "target": [
+        70,
+        83
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "set-piece-taking",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Only for your designated taker: consider 85–95. Otherwise retain the base value.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "curl",
+      "target": [
+        75,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "speed",
+      "target": [
+        88,
+        96
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "acceleration",
+      "target": [
+        85,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "kicking-power",
+      "target": [
+        75,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "jumping",
+      "target": [
+        73,
+        85
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "physical-contact",
+      "target": [
+        78,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "balance",
+      "target": [
+        75,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "stamina",
+      "target": [
+        88,
+        96
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "defensive-awareness",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "tackling",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "aggression",
+      "target": [
+        78,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "defensive-engagement",
+      "target": [
+        83,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "gk-awareness",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "gk-catching",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "gk-parrying",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "gk-reflexes",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "LB",
+      "attribute": "gk-reach",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "offensive-awareness",
+      "target": [
+        70,
+        83
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "ball-control",
+      "target": [
+        78,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "dribbling",
+      "target": [
+        78,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "tight-possession",
+      "target": [
+        75,
+        85
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "low-pass",
+      "target": [
+        78,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "lofted-pass",
+      "target": [
+        83,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "finishing",
+      "target": [
+        55,
+        70
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "heading",
+      "target": [
+        70,
+        83
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "set-piece-taking",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Only for your designated taker: consider 85–95. Otherwise retain the base value.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "curl",
+      "target": [
+        75,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "speed",
+      "target": [
+        88,
+        96
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "acceleration",
+      "target": [
+        85,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "kicking-power",
+      "target": [
+        75,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "jumping",
+      "target": [
+        73,
+        85
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "physical-contact",
+      "target": [
+        78,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "balance",
+      "target": [
+        75,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "stamina",
+      "target": [
+        88,
+        96
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "defensive-awareness",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "tackling",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "aggression",
+      "target": [
+        78,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "defensive-engagement",
+      "target": [
+        83,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "gk-awareness",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "gk-catching",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "gk-parrying",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "gk-reflexes",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "RB",
+      "attribute": "gk-reach",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "offensive-awareness",
+      "target": [
+        50,
+        65
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "ball-control",
+      "target": [
+        65,
+        78
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "dribbling",
+      "target": [
+        55,
+        70
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "tight-possession",
+      "target": [
+        60,
+        75
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "low-pass",
+      "target": [
+        70,
+        83
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "lofted-pass",
+      "target": [
+        70,
+        85
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "finishing",
+      "target": [
+        45,
+        60
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "heading",
+      "target": [
+        85,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ],
+      "practical": "Useful for aerial clearances and attacking set pieces. The cited 89 claim concerns an attacking header, not a defensive-clearance unlock."
+    },
+    {
+      "position": "CB",
+      "attribute": "set-piece-taking",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Only for your designated taker: consider 85–95. Otherwise retain the base value.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "curl",
+      "target": [
+        50,
+        65
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "speed",
+      "target": [
+        83,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "acceleration",
+      "target": [
+        78,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "kicking-power",
+      "target": [
+        75,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "jumping",
+      "target": [
+        85,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "physical-contact",
+      "target": [
+        90,
+        96
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "balance",
+      "target": [
+        65,
+        80
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "stamina",
+      "target": [
+        80,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "defensive-awareness",
+      "target": [
+        93,
+        99
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "tackling",
+      "target": [
+        90,
+        97
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "aggression",
+      "target": [
+        85,
+        95
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "defensive-engagement",
+      "target": [
+        90,
+        97
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "gk-awareness",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "gk-catching",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "gk-parrying",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "gk-reflexes",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "CB",
+      "attribute": "gk-reach",
+      "target": null,
+      "targetStatus": "not-applicable",
+      "targetConfidence": "heuristic",
+      "targetNote": "Goalkeeper-only investment; no outfield target.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "offensive-awareness",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "ball-control",
+      "target": [
+        55,
+        70
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "dribbling",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "tight-possession",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "low-pass",
+      "target": [
+        65,
+        78
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "lofted-pass",
+      "target": [
+        70,
+        83
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "finishing",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "heading",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "set-piece-taking",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "curl",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "speed",
+      "target": [
+        55,
+        70
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ],
+      "practical": "Keep running speed secondary to keeper attributes. The cited off-ball sprint thresholds are not goalkeeper-save thresholds."
+    },
+    {
+      "position": "GK",
+      "attribute": "acceleration",
+      "target": [
+        55,
+        70
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ],
+      "practical": "Treat this as secondary movement ability. An older outfield sprint finding is not evidence of a goalkeeper-save animation unlock."
+    },
+    {
+      "position": "GK",
+      "attribute": "kicking-power",
+      "target": [
+        75,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "jumping",
+      "target": [
+        75,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "physical-contact",
+      "target": [
+        75,
+        88
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "balance",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "stamina",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "defensive-awareness",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "tackling",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "aggression",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "defensive-engagement",
+      "target": null,
+      "targetStatus": "retain-base",
+      "targetConfidence": "heuristic",
+      "targetNote": "Keep the card’s base value; no dedicated spending target for this role.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "gk-awareness",
+      "target": [
+        90,
+        97
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "gk-catching",
+      "target": [
+        83,
+        90
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "gk-parrying",
+      "target": [
+        83,
+        93
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "gk-reflexes",
+      "target": [
+        90,
+        97
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    },
+    {
+      "position": "GK",
+      "attribute": "gk-reach",
+      "target": [
+        90,
+        97
+      ],
+      "targetStatus": "recommended",
+      "targetConfidence": "heuristic",
+      "targetNote": "Editorial role target; use the lower end when progression points are scarce.",
+      "sourceIds": [
+        "editorial"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "konami-v6",
+      "title": "KONAMI · v6.0.0 version notes",
+      "url": "https://www.konami.com/efootball/en-us/page/v6/versioninfo_v6-00",
+      "type": "official",
+      "publishedAt": "2026-08-12",
+      "scope": "All platforms; platform-specific sections",
+      "note": "Confirms new movement, kick and goalkeeper animations. Does not publish numeric attribute breakpoints.",
+      "lastChecked": "2026-09-27"
+    },
+    {
+      "id": "konami-mobile",
+      "title": "KONAMI · Mobile trapping changes",
+      "url": "https://www.konami.com/efootball/en/topic/news/5625",
+      "type": "official",
+      "publishedAt": "2026-08-12",
+      "scope": "iOS / Android · v6.0.0",
+      "note": "New trapping motions and changed action selection; a reason to retest old ball-control claims.",
+      "lastChecked": "2026-09-27"
+    },
+    {
+      "id": "konami-stamina",
+      "title": "KONAMI · Mobile stamina and AI",
+      "url": "https://www.konami.com/efootball/en-us/topic/news/5632",
+      "type": "official",
+      "publishedAt": "2026-08-12",
+      "scope": "iOS / Android · v6.0.0",
+      "note": "Changes stamina use for Long Ball Counter and halftime recovery for centre backs. No stamina cutoff supplied.",
+      "lastChecked": "2026-09-27"
+    },
+    {
+      "id": "speed-final",
+      "title": "Amadeusz / V3n0mix · Complete speed benefit table",
+      "url": "https://www.reddit.com/r/Amadeusz/comments/1w0un07/the_speed_stat_benefit_table_complete_edition/",
+      "type": "translated-test",
+      "publishedAt": "2026-08-28",
+      "scope": "International v6.0.0; controlled engine test, mobile replication unverified",
+      "note": "Reports an off-ball efficiency change at 90 and lower, nonzero returns from 96 to 99. Not a dribbling-speed cap.",
+      "lastChecked": "2026-09-27"
+    },
+    {
+      "id": "speed-correction",
+      "title": "Amadeusz / V3n0mix · 96 vs 99 correction",
+      "url": "https://www.reddit.com/r/Amadeusz/comments/1vzxseo/is_there_really_no_difference_between_96_and_99/",
+      "type": "translated-test",
+      "publishedAt": "2026-08-27",
+      "scope": "v6.0.0; close-up kickoff comparison",
+      "note": "A more precise follow-up corrects the apparent plateau in half-pitch frame timing. Training groups and on-ball effects still matter.",
+      "lastChecked": "2026-09-27"
+    },
+    {
+      "id": "acceleration",
+      "title": "Amadeusz / V3n0mix · Acceleration benefit curve",
+      "url": "https://www.reddit.com/r/Amadeusz/comments/1rmfc7d/a_mustknow_for_player_builds_the_acceleration/",
+      "type": "translated-test",
+      "publishedAt": "2026-03-06",
+      "scope": "Pre-v6 engine; first 18 metres of a run",
+      "note": "88 concerns stride frequency; 91 begins lower gains in the reported test. No current mobile retest verified.",
+      "lastChecked": "2026-09-27"
+    },
+    {
+      "id": "awareness",
+      "title": "Amadeusz / V3n0mix · Is Offensive Awareness 90?",
+      "url": "https://www.reddit.com/r/Amadeusz/comments/1t5jdak/is_the_threshold_for_offensive_awareness_actually/",
+      "type": "translated-test",
+      "publishedAt": null,
+      "scope": "Pre-v6 engine; controlled off-ball start",
+      "note": "Older controlled test of the 90 awareness claim. Do not treat the acceleration effect as a positioning cap.",
+      "lastChecked": "2026-09-27"
+    },
+    {
+      "id": "def-awareness",
+      "title": "Amadeusz / V3n0mix · Defensive Awareness and acceleration",
+      "url": "https://www.reddit.com/r/Amadeusz/comments/1qzagsh/the_defensive_awareness_threshold_that_affects/",
+      "type": "translated-test",
+      "publishedAt": null,
+      "scope": "Pre-v6 engine; marking-state initial acceleration",
+      "note": "Discusses a below-70 penalty in a specific state and explicitly retires the old 86 Tight Possession theory. Does not justify 70 for a defender.",
+      "lastChecked": "2026-09-27"
+    },
+    {
+      "id": "heading",
+      "title": "Amadeusz / V3n0mix · Heading threshold 89",
+      "url": "https://www.reddit.com/r/Amadeusz/comments/1sw6161/the_threshold_for_heading_is_89/",
+      "type": "translated-test",
+      "publishedAt": "2026-04-26",
+      "scope": "Pre-v6 engine; attacking heading animation",
+      "note": "Revised from 90 to 89 after more testing. Reports a chance of an arched-back header, not guaranteed goals.",
+      "lastChecked": "2026-09-27"
+    },
+    {
+      "id": "ball-control",
+      "title": "Amadeusz / V3n0mix · Ball Control theory rebuttal",
+      "url": "https://www.reddit.com/r/Amadeusz/comments/1qazew3/an_ingame_test_and_rebuttal_of_the_ball_control/",
+      "type": "translated-test",
+      "publishedAt": null,
+      "scope": "Pre-v6 engine; turning-test methodology",
+      "note": "Challenges the ball-control turning breakpoint theory and the reliability of the Skill Up test method.",
+      "lastChecked": "2026-09-27"
+    },
+    {
+      "id": "balance",
+      "title": "Community observation · Balance 88 claim",
+      "url": "https://www.reddit.com/r/efootballtactics/comments/1wmjvwo/revealing_a_threshold_i_discovered/",
+      "type": "community-observation",
+      "publishedAt": "2026-09-21",
+      "scope": "Recent post; exact build/platform and controls not established",
+      "note": "A claim about evading tackles at 88. No controlled repeated protocol or independent replication verified here.",
+      "lastChecked": "2026-09-27"
+    },
+    {
+      "id": "editorial",
+      "title": "Threshold Field Guide · Editorial targets",
+      "url": null,
+      "type": "editorial",
+      "publishedAt": "2026-09-27",
+      "scope": "Role-based starting points for this guide",
+      "note": "All position target ranges are original heuristic recommendations, not measured thresholds or official prescriptions. Adjust to the card, role and point budget.",
+      "lastChecked": "2026-09-27"
+    }
+  ],
+  "confidenceLevels": [
+    {
+      "id": "current-test",
+      "label": "Proven / current-test",
+      "description": "Current-engine controlled test reported in a traceable source. “Proven” is scoped to that experiment; not official confirmation or universal mobile replication."
+    },
+    {
+      "id": "provisional",
+      "label": "Provisional",
+      "description": "Older-engine test or a recent claim that still needs controlled replication."
+    },
+    {
+      "id": "heuristic",
+      "label": "Heuristic",
+      "description": "Practical build guidance; no measured numeric breakpoint established."
+    },
+    {
+      "id": "no-hard-threshold",
+      "label": "No hard threshold",
+      "description": "No hard threshold established in the reviewed evidence. This is not proof that no breakpoint exists."
+    }
+  ],
+  "memorize": [
+    {
+      "number": "90 → 96",
+      "title": "Speed: a budget decision",
+      "text": "Current off-ball tests support this useful range. 96–99 still improves, with smaller returns.",
+      "sourceIds": [
+        "speed-final",
+        "speed-correction"
+      ]
+    },
+    {
+      "number": "88 / 91",
+      "title": "Acceleration: provisional",
+      "text": "Older stride tests, awaiting v6 confirmation. Do not treat 91 as a cap.",
+      "sourceIds": [
+        "acceleration"
+      ]
+    },
+    {
+      "number": "No magic 90",
+      "title": "Most stats are role targets",
+      "text": "90 Finishing is guidance. 86/91 Tight Possession is not a verified current rule.",
+      "sourceIds": [
+        "editorial",
+        "def-awareness"
+      ]
+    }
+  ],
+  "fixedTraits": [
+    {
+      "name": "Weak Foot Usage & Accuracy",
+      "note": "Card traits, not normal progression targets. Evaluate the actual off-foot actions required by the role."
+    },
+    {
+      "name": "Form & Injury Resistance",
+      "note": "Card-selection considerations, not attributes to chase with progression points."
+    },
+    {
+      "name": "Height, reach, skills & playing styles",
+      "note": "Check alongside the numeric chart. A target cannot make two different player models behave identically."
+    }
+  ]
+}

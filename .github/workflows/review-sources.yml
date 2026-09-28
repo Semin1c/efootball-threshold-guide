@@ -1,0 +1,56 @@
+name: Update provisional findings
+on:
+  schedule:
+    - cron: '17 14 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - name: Verify extraction and preservation
+        run: python3 scripts/test_claims.py
+      - name: Discover provisional findings
+        run: python3 scripts/update_claims.py
+      - name: Validate reviewed chart
+        run: python3 scripts/validate_data.py
+      - name: Preserve published feed in repository history
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add site/provisional.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update provisional source findings and availability'
+            git push origin HEAD:main
+          fi
+      - name: Report source availability
+        run: |
+          python3 - <<'PY'
+          import json, os
+          data=json.load(open('site/provisional.json'))
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as out:
+              out.write('## Provisional feed updated\n\n')
+              out.write(str(len(data['claims']))+' candidates retained. Reviewed thresholds unchanged.\n\n')
+              ok=sum(c['ok'] for c in data['checks'])
+              out.write(str(ok)+' of '+str(len(data['checks']))+' sources reached. See the site for source availability.\n')
+          PY
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+      - name: Publish updated feed
+        id: deployment
+        uses: actions/deploy-pages@v4
