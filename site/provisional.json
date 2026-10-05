@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastCheck": "2026-09-28T22:29:29.995177+00:00",
-  "lastAddition": "2026-09-28T22:28:23.718255+00:00",
+  "lastCheck": "2026-10-05T21:28:57.213387+00:00",
+  "lastAddition": "2026-10-05T21:28:57.213387+00:00",
   "health": "partial",
   "checks": [
     {
@@ -26,32 +26,32 @@
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/5552",
-      "url": "https://www.konami.com/efootball/en/topic/news/5552",
-      "ok": false,
-      "error": "Source blocked or extraction incomplete"
-    },
-    {
-      "source": "https://www.konami.com/efootball/en/topic/news/5553",
-      "url": "https://www.konami.com/efootball/en/topic/news/5553",
-      "ok": false,
-      "error": "Source blocked or extraction incomplete"
-    },
-    {
       "source": "https://www.konami.com/efootball/en/topic/news/5625",
       "url": "https://www.konami.com/efootball/en/topic/news/5625",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/5879",
-      "url": "https://www.konami.com/efootball/en/topic/news/5879",
+      "source": "https://www.konami.com/efootball/en/topic/news/5904",
+      "url": "https://www.konami.com/efootball/en/topic/news/5904",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/5888",
-      "url": "https://www.konami.com/efootball/en/topic/news/5888",
+      "source": "https://www.konami.com/efootball/en/topic/news/5905",
+      "url": "https://www.konami.com/efootball/en/topic/news/5905",
+      "ok": false,
+      "error": "Source blocked or extraction incomplete"
+    },
+    {
+      "source": "https://www.konami.com/efootball/en/topic/news/5907",
+      "url": "https://www.konami.com/efootball/en/topic/news/5907",
+      "ok": false,
+      "error": "Source blocked or extraction incomplete"
+    },
+    {
+      "source": "https://www.konami.com/efootball/en/topic/news/5918",
+      "url": "https://www.konami.com/efootball/en/topic/news/5918",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
@@ -105,6 +105,40 @@
     }
   ],
   "claims": [
+    {
+      "id": "080777980694a813a7712488",
+      "confidence": "provisional",
+      "discoveredAt": "2026-10-05T21:28:57.213387+00:00",
+      "sourcePublishedAt": "2026-10-01T11:48:36+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1wuxc1p/amadeusz_qa_5_what_does_the_defensive_engagement/",
+      "sourceType": "community-feed",
+      "title": "Potential defensive awareness finding",
+      "attributeIds": [
+        "defensive-awareness"
+      ],
+      "excerpt": "90 Attacking Awareness and 90 Defensive Awareness remain the thresholds that affect when attacking and defensive movement kicks in.",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "2ec60abaedb0694150693a6f",
+      "confidence": "provisional",
+      "discoveredAt": "2026-10-05T21:28:57.213387+00:00",
+      "sourcePublishedAt": "2026-10-05T15:11:21+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1wyb1x6/new_goalkeeper_showtime_skill_will_it_change_the/",
+      "sourceType": "community-feed",
+      "title": "Potential gk catching finding",
+      "attributeIds": [
+        "gk-catching"
+      ],
+      "excerpt": "Looking closely, this advantage comes from a difference in the goalkeeper's rushing out animation sets:",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
     {
       "id": "2c11eaa3d34a33a24d1574b9",
       "confidence": "provisional",
