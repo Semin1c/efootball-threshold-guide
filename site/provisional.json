@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastCheck": "2026-10-05T21:28:57.213387+00:00",
-  "lastAddition": "2026-10-05T21:28:57.213387+00:00",
+  "lastCheck": "2026-10-12T22:08:01.815626+00:00",
+  "lastAddition": "2026-10-12T22:08:01.815626+00:00",
   "health": "partial",
   "checks": [
     {
@@ -32,26 +32,26 @@
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/5904",
-      "url": "https://www.konami.com/efootball/en/topic/news/5904",
+      "source": "https://www.konami.com/efootball/en/topic/news/5932",
+      "url": "https://www.konami.com/efootball/en/topic/news/5932",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/5905",
-      "url": "https://www.konami.com/efootball/en/topic/news/5905",
+      "source": "https://www.konami.com/efootball/en/topic/news/5933",
+      "url": "https://www.konami.com/efootball/en/topic/news/5933",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/5907",
-      "url": "https://www.konami.com/efootball/en/topic/news/5907",
+      "source": "https://www.konami.com/efootball/en/topic/news/5934",
+      "url": "https://www.konami.com/efootball/en/topic/news/5934",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/5918",
-      "url": "https://www.konami.com/efootball/en/topic/news/5918",
+      "source": "https://www.konami.com/efootball/en/topic/news/5948",
+      "url": "https://www.konami.com/efootball/en/topic/news/5948",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
@@ -105,6 +105,23 @@
     }
   ],
   "claims": [
+    {
+      "id": "358bd798a48d41c60c52985f",
+      "confidence": "provisional",
+      "discoveredAt": "2026-10-12T22:08:01.815626+00:00",
+      "sourcePublishedAt": "2026-10-08T15:29:31+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1x0tycy/farewell_messi_sss_tier_the_strongest_featured/",
+      "sourceType": "community-feed",
+      "title": "Potential stamina finding",
+      "attributeIds": [
+        "stamina"
+      ],
+      "excerpt": "At the same time, very few previous Featured Messi cards had enough Stamina to hit the manager +3 boost",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
     {
       "id": "080777980694a813a7712488",
       "confidence": "provisional",
