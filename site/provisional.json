@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastCheck": "2026-10-12T22:08:01.815626+00:00",
-  "lastAddition": "2026-10-12T22:08:01.815626+00:00",
+  "lastCheck": "2026-10-19T19:54:13.304505+00:00",
+  "lastAddition": "2026-10-19T19:54:13.304505+00:00",
   "health": "partial",
   "checks": [
     {
@@ -32,26 +32,26 @@
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/5932",
-      "url": "https://www.konami.com/efootball/en/topic/news/5932",
+      "source": "https://www.konami.com/efootball/en/topic/news/5964",
+      "url": "https://www.konami.com/efootball/en/topic/news/5964",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/5933",
-      "url": "https://www.konami.com/efootball/en/topic/news/5933",
+      "source": "https://www.konami.com/efootball/en/topic/news/5974",
+      "url": "https://www.konami.com/efootball/en/topic/news/5974",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/5934",
-      "url": "https://www.konami.com/efootball/en/topic/news/5934",
+      "source": "https://www.konami.com/efootball/en/topic/news/5975",
+      "url": "https://www.konami.com/efootball/en/topic/news/5975",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/5948",
-      "url": "https://www.konami.com/efootball/en/topic/news/5948",
+      "source": "https://www.konami.com/efootball/en/topic/news/5976",
+      "url": "https://www.konami.com/efootball/en/topic/news/5976",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
@@ -105,6 +105,115 @@
     }
   ],
   "claims": [
+    {
+      "id": "297a9e8cbf0e17b93ebbd3dd",
+      "confidence": "provisional",
+      "discoveredAt": "2026-10-19T19:54:13.304505+00:00",
+      "sourcePublishedAt": "2026-10-15T16:20:20+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1x6q44o/this_nitro_boost_actually_works/",
+      "sourceType": "community-feed",
+      "title": "Potential acceleration finding",
+      "attributeIds": [
+        "acceleration"
+      ],
+      "excerpt": "(The animation above is slowed down after the initial touch for better clarity.) As shown, when starting from a",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "e005dbb92cba1951f095e511",
+      "confidence": "provisional",
+      "discoveredAt": "2026-10-19T19:54:13.304505+00:00",
+      "sourcePublishedAt": "2026-10-17T08:17:00+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1x84u4f/unlocking_the_acceleration_threshold/",
+      "sourceType": "community-feed",
+      "title": "Potential acceleration finding",
+      "attributeIds": [
+        "acceleration"
+      ],
+      "excerpt": "Unlocking the Acceleration Threshold!",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "f1f6e957c0f2c36f91f78a19",
+      "confidence": "provisional",
+      "discoveredAt": "2026-10-19T19:54:13.304505+00:00",
+      "sourcePublishedAt": "2026-10-17T16:02:23+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1x8dv3n/the_revalidation_of_fortress/",
+      "sourceType": "community-feed",
+      "title": "Potential ball control, low pass, lofted pass finding",
+      "attributeIds": [
+        "ball-control",
+        "low-pass",
+        "lofted-pass",
+        "finishing",
+        "heading",
+        "curl"
+      ],
+      "excerpt": "… Heel Trick, Acrobatic Finishing When their respective animation conditions are met, the currently selected stat +5 Heading, Through Passing,",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "ffd0fc099705e3857028bb7c",
+      "confidence": "provisional",
+      "discoveredAt": "2026-10-19T19:54:13.304505+00:00",
+      "sourcePublishedAt": "2026-10-18T15:19:18+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1x95s54/stamina_changes_these_cards_are_now_highly_sought/",
+      "sourceType": "community-feed",
+      "title": "Potential stamina finding",
+      "attributeIds": [
+        "stamina"
+      ],
+      "excerpt": "The change in v27 is that the threshold for stamina debuffs has moved from 50% to 70%.",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "1207a1b2b9f461ff6e8c426e",
+      "confidence": "provisional",
+      "discoveredAt": "2026-10-19T19:54:13.304505+00:00",
+      "sourcePublishedAt": "2026-10-18T16:26:29+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1x97fnx/the_threshold_for_passing_and_shooting_is_90/",
+      "sourceType": "community-feed",
+      "title": "Potential speed, acceleration finding",
+      "attributeIds": [
+        "speed",
+        "acceleration"
+      ],
+      "excerpt": "Actually, with every major update, the parameters get tweaked, and the return on investment for Speed/Acceleration gets adjusted too.",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "197790bf843de436a59b7c51",
+      "confidence": "provisional",
+      "discoveredAt": "2026-10-19T19:54:13.304505+00:00",
+      "sourcePublishedAt": "2026-10-19T02:45:26+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1x9liap/new_seedorf_yaya_touré_pack_initial_builds_review/",
+      "sourceType": "community-feed",
+      "title": "Potential speed, acceleration finding",
+      "attributeIds": [
+        "speed",
+        "acceleration"
+      ],
+      "excerpt": "… underwhelming Speed/Acceleration failing to reach the 90 threshold, midfielders with a medium player model around 183cm are inherently in",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
     {
       "id": "358bd798a48d41c60c52985f",
       "confidence": "provisional",
