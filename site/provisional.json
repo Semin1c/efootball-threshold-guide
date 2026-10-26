@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastCheck": "2026-10-19T19:54:13.304505+00:00",
-  "lastAddition": "2026-10-19T19:54:13.304505+00:00",
+  "lastCheck": "2026-10-26T19:56:06.003060+00:00",
+  "lastAddition": "2026-10-26T19:56:06.003060+00:00",
   "health": "partial",
   "checks": [
     {
@@ -32,26 +32,26 @@
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/5964",
-      "url": "https://www.konami.com/efootball/en/topic/news/5964",
+      "source": "https://www.konami.com/efootball/en/topic/news/6032",
+      "url": "https://www.konami.com/efootball/en/topic/news/6032",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/5974",
-      "url": "https://www.konami.com/efootball/en/topic/news/5974",
+      "source": "https://www.konami.com/efootball/en/topic/news/6043",
+      "url": "https://www.konami.com/efootball/en/topic/news/6043",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/5975",
-      "url": "https://www.konami.com/efootball/en/topic/news/5975",
+      "source": "https://www.konami.com/efootball/en/topic/news/6044",
+      "url": "https://www.konami.com/efootball/en/topic/news/6044",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/5976",
-      "url": "https://www.konami.com/efootball/en/topic/news/5976",
+      "source": "https://www.konami.com/efootball/en/topic/news/6045",
+      "url": "https://www.konami.com/efootball/en/topic/news/6045",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
@@ -105,6 +105,116 @@
     }
   ],
   "claims": [
+    {
+      "id": "daf18977ac06b017d0f85789",
+      "confidence": "provisional",
+      "discoveredAt": "2026-10-26T19:56:06.003060+00:00",
+      "sourcePublishedAt": "2026-10-22T00:44:42+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xc4h3v/an_investigation_into_the_balance_stat/",
+      "sourceType": "community-feed",
+      "title": "Potential tackling finding",
+      "attributeIds": [
+        "tackling"
+      ],
+      "excerpt": "04 Evading a Standing Tackle: The Exclusion Threshold in the Random Roll",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "5b229d3c70063c91f1957111",
+      "confidence": "provisional",
+      "discoveredAt": "2026-10-26T19:56:06.003060+00:00",
+      "sourcePublishedAt": "2026-10-22T20:18:11+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xctlfu/an_analysis_of_the_physical_contact_mechanic/",
+      "sourceType": "community-feed",
+      "title": "Potential physical contact finding",
+      "attributeIds": [
+        "physical-contact"
+      ],
+      "excerpt": "Quick Note Up Front: Physical Contact does not have any thresholds; it scales completely linearly, so the higher, the",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "6d8b25e1ed3309cde91ee64a",
+      "confidence": "provisional",
+      "discoveredAt": "2026-10-26T19:56:06.003060+00:00",
+      "sourcePublishedAt": "2026-10-23T16:55:36+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xdjizu/new_haaland_ssstier_striker/",
+      "sourceType": "community-feed",
+      "title": "Potential speed finding",
+      "attributeIds": [
+        "speed"
+      ],
+      "excerpt": "Even if he can only benefit from a +1 booster, his double speed still reach the 90 threshold.",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "54a158a5970117ec641933ee",
+      "confidence": "provisional",
+      "discoveredAt": "2026-10-26T19:56:06.003060+00:00",
+      "sourcePublishedAt": "2026-10-23T18:18:10+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xdlq4e/indepth_review_yaya_touré/",
+      "sourceType": "community-feed",
+      "title": "Potential defensive awareness, tight possession, low pass finding",
+      "attributeIds": [
+        "defensive-awareness",
+        "tight-possession",
+        "low-pass",
+        "speed",
+        "acceleration"
+      ],
+      "excerpt": "… the 90 low pass hits the stat threshold, and 90 defensive awareness along with 90 acceleration and 90 speed",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "3b5bf3011205df32159cb189",
+      "confidence": "provisional",
+      "discoveredAt": "2026-10-26T19:56:06.003060+00:00",
+      "sourcePublishedAt": "2026-10-24T10:39:24+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xe5dsl/mysterious_attribute_stronger_hand/",
+      "sourceType": "community-feed",
+      "title": "Potential speed, gk catching, gk parrying finding",
+      "attributeIds": [
+        "speed",
+        "gk-catching",
+        "gk-parrying"
+      ],
+      "excerpt": "… hand to throw the ball Yes Throwing animation ID No Throwing animation transition time No GK left/right diving animations",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "8530589cbed023144873aa0e",
+      "confidence": "provisional",
+      "discoveredAt": "2026-10-26T19:56:06.003060+00:00",
+      "sourcePublishedAt": "2026-10-26T06:32:51+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xfpaza/hole_player_baggio_overshadowed_by_him_new_pack/",
+      "sourceType": "community-feed",
+      "title": "Potential dribbling, speed, acceleration finding",
+      "attributeIds": [
+        "dribbling",
+        "speed",
+        "acceleration"
+      ],
+      "excerpt": "… philosophy is to hit the 90 benefit threshold for Passing and Shooting, while leaving some room in the three",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
     {
       "id": "297a9e8cbf0e17b93ebbd3dd",
       "confidence": "provisional",
