@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastCheck": "2026-10-26T19:56:06.003060+00:00",
-  "lastAddition": "2026-10-26T19:56:06.003060+00:00",
+  "lastCheck": "2026-11-02T22:46:04.326320+00:00",
+  "lastAddition": "2026-11-02T22:46:04.326320+00:00",
   "health": "partial",
   "checks": [
     {
@@ -32,26 +32,26 @@
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/6032",
-      "url": "https://www.konami.com/efootball/en/topic/news/6032",
+      "source": "https://www.konami.com/efootball/en/topic/news/5887",
+      "url": "https://www.konami.com/efootball/en/topic/news/5887",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/6043",
-      "url": "https://www.konami.com/efootball/en/topic/news/6043",
+      "source": "https://www.konami.com/efootball/en/topic/news/6059",
+      "url": "https://www.konami.com/efootball/en/topic/news/6059",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/6044",
-      "url": "https://www.konami.com/efootball/en/topic/news/6044",
+      "source": "https://www.konami.com/efootball/en/topic/news/6064",
+      "url": "https://www.konami.com/efootball/en/topic/news/6064",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/6045",
-      "url": "https://www.konami.com/efootball/en/topic/news/6045",
+      "source": "https://www.konami.com/efootball/en/topic/news/6070",
+      "url": "https://www.konami.com/efootball/en/topic/news/6070",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
@@ -105,6 +105,197 @@
     }
   ],
   "claims": [
+    {
+      "id": "1171e2861b7dd705922fd930",
+      "confidence": "provisional",
+      "discoveredAt": "2026-11-02T22:46:04.326320+00:00",
+      "sourcePublishedAt": "2026-10-29T10:10:49+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xifxhm/ballon_dor_kane_build_and_analysis/",
+      "sourceType": "community-feed",
+      "title": "Potential dribbling, speed, acceleration finding",
+      "attributeIds": [
+        "dribbling",
+        "speed",
+        "acceleration"
+      ],
+      "excerpt": "The build logic is: acceleration/sprint speed, shooting, passing, and dribbling are all allocated targeting the 90 efficiency turning-point threshold.",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "6c23ac04effc3a08594e5f85",
+      "confidence": "provisional",
+      "discoveredAt": "2026-11-02T22:46:04.326320+00:00",
+      "sourcePublishedAt": "2026-10-31T20:22:32+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xkkei2/analysis_thresholds_for_the_5_gk_stats/",
+      "sourceType": "community-feed",
+      "title": "Potential gk parrying, gk reflexes finding",
+      "attributeIds": [
+        "gk-parrying",
+        "gk-reflexes"
+      ],
+      "excerpt": "GK Reflexes Thresholds for Parrying/Deflecting Classification:",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "3b1d3240c8e89d75b2b3bb09",
+      "confidence": "provisional",
+      "discoveredAt": "2026-11-02T22:46:04.326320+00:00",
+      "sourcePublishedAt": "2026-11-01T07:04:38+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xkwkrb/how_exactly_do_the_heading_stat_and_the_heading/",
+      "sourceType": "community-feed",
+      "title": "Potential heading finding",
+      "attributeIds": [
+        "heading"
+      ],
+      "excerpt": "TL;DR Heading Thresholds: 90, and 86 (before manager boost and player boosters)",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "c1ef111985410296e43cb3f2",
+      "confidence": "provisional",
+      "discoveredAt": "2026-11-02T22:46:04.326320+00:00",
+      "sourcePublishedAt": "2026-11-01T08:29:52+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xkxw8m/use_the_5level_attackdefense_mechanic_to_win/",
+      "sourceType": "community-feed",
+      "title": "Potential speed, stamina finding",
+      "attributeIds": [
+        "speed",
+        "stamina"
+      ],
+      "excerpt": "The Fighting Spirit skill delays the stamina threshold at which this running-speed downshift occurs.",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "f828f7cdc13f703eaeb442a1",
+      "confidence": "provisional",
+      "discoveredAt": "2026-11-02T22:46:04.326320+00:00",
+      "sourcePublishedAt": "2026-11-01T16:40:25+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xl7orn/has_stamina_been_nerfed_for_long_ball_counter/",
+      "sourceType": "community-feed",
+      "title": "Potential stamina finding",
+      "attributeIds": [
+        "stamina"
+      ],
+      "excerpt": "— \"Adjusted stamina consumption for the 'Long Ball Counter' playstyle to address the issue where it consumed less stamina",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "55ff179988091c2d4d2583ff",
+      "confidence": "provisional",
+      "discoveredAt": "2026-11-02T22:46:04.326320+00:00",
+      "sourcePublishedAt": "2026-11-01T19:30:20+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xlc263/wyzzzzzzzz_new_van_der_sar_recommended_build/",
+      "sourceType": "community-feed",
+      "title": "Potential gk catching finding",
+      "attributeIds": [
+        "gk-catching"
+      ],
+      "excerpt": "​GK Catching 96: Hits the final mechanic threshold for catch probability, lowering the required count to the lowest tier.",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "9a1d28c646d366ed7f3aef2e",
+      "confidence": "provisional",
+      "discoveredAt": "2026-11-02T22:46:04.326320+00:00",
+      "sourcePublishedAt": "2026-11-01T20:08:53+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xld188/wyzzzzzzzz_new_petr_čech_recommended_build/",
+      "sourceType": "community-feed",
+      "title": "Potential gk reflexes finding",
+      "attributeIds": [
+        "gk-reflexes"
+      ],
+      "excerpt": "​Stat Threshold Breakpoints: In verified parry/reach animation calculations, 100 and 101 GK Reflexes yield identical in-game performance.",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "2333bfd41730039f2d398b5b",
+      "confidence": "provisional",
+      "discoveredAt": "2026-11-02T22:46:04.326320+00:00",
+      "sourcePublishedAt": "2026-11-01T20:24:32+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xldf8h/wyzzzzzzzz_bt_buffon_build_recommendation/",
+      "sourceType": "community-feed",
+      "title": "Potential gk catching finding",
+      "attributeIds": [
+        "gk-catching"
+      ],
+      "excerpt": "GK Catching (97): Already crosses the two animation duration threshold tiers at 90 and 96; 97 itself is not",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "f77947aed1310964264655fc",
+      "confidence": "provisional",
+      "discoveredAt": "2026-11-02T22:46:04.326320+00:00",
+      "sourcePublishedAt": "2026-11-01T21:43:31+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xlfclg/detailed_analysis_of_the_offensive_awareness/",
+      "sourceType": "community-feed",
+      "title": "Potential offensive awareness finding",
+      "attributeIds": [
+        "offensive-awareness"
+      ],
+      "excerpt": "… reaching 90 suddenly unlocks a faster running animation.",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "e7a97c0b141123858661edc3",
+      "confidence": "provisional",
+      "discoveredAt": "2026-11-02T22:46:04.326320+00:00",
+      "sourcePublishedAt": "2026-11-01T22:48:52+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xlgv7e/an_analysis_of_the_defensive_awareness_mechanic/",
+      "sourceType": "community-feed",
+      "title": "Potential defensive awareness finding",
+      "attributeIds": [
+        "defensive-awareness"
+      ],
+      "excerpt": "… Awareness from 64 to 65 changes this threshold; continuing to raise it from 65 to 90, 99, or even",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "811ff9aa920fdd3807bfeb72",
+      "confidence": "provisional",
+      "discoveredAt": "2026-11-02T22:46:04.326320+00:00",
+      "sourcePublishedAt": "2026-11-02T10:40:30+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xltvk0/wyzzzzzzzz_st_courtois_new_recommended_build/",
+      "sourceType": "community-feed",
+      "title": "Potential gk catching finding",
+      "attributeIds": [
+        "gk-catching"
+      ],
+      "excerpt": "However, Catching still won't reach the 96 threshold, and based on datamined action adjustments, 101 Reflexes performs exactly the",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
     {
       "id": "daf18977ac06b017d0f85789",
       "confidence": "provisional",
