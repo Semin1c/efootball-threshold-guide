@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastCheck": "2026-11-02T22:46:04.326320+00:00",
-  "lastAddition": "2026-11-02T22:46:04.326320+00:00",
+  "lastCheck": "2026-11-09T23:25:52.396331+00:00",
+  "lastAddition": "2026-11-09T23:25:52.396331+00:00",
   "health": "partial",
   "checks": [
     {
@@ -32,26 +32,26 @@
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/5887",
-      "url": "https://www.konami.com/efootball/en/topic/news/5887",
+      "source": "https://www.konami.com/efootball/en/topic/news/6025",
+      "url": "https://www.konami.com/efootball/en/topic/news/6025",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/6059",
-      "url": "https://www.konami.com/efootball/en/topic/news/6059",
+      "source": "https://www.konami.com/efootball/en/topic/news/6077",
+      "url": "https://www.konami.com/efootball/en/topic/news/6077",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/6064",
-      "url": "https://www.konami.com/efootball/en/topic/news/6064",
+      "source": "https://www.konami.com/efootball/en/topic/news/6078",
+      "url": "https://www.konami.com/efootball/en/topic/news/6078",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/6070",
-      "url": "https://www.konami.com/efootball/en/topic/news/6070",
+      "source": "https://www.konami.com/efootball/en/topic/news/6087",
+      "url": "https://www.konami.com/efootball/en/topic/news/6087",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
@@ -105,6 +105,93 @@
     }
   ],
   "claims": [
+    {
+      "id": "392b325f18920273d76a8aae",
+      "confidence": "provisional",
+      "discoveredAt": "2026-11-09T23:25:52.396331+00:00",
+      "sourcePublishedAt": "2026-11-05T11:01:47+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xofuln/epic_aggressive_markers_initial_analysis_builds/",
+      "sourceType": "community-feed",
+      "title": "Potential defensive awareness, acceleration, stamina finding",
+      "attributeIds": [
+        "defensive-awareness",
+        "acceleration",
+        "stamina"
+      ],
+      "excerpt": "… Pace stats, his Stamina hits exactly the threshold to trigger the manager's +3 boost at 90, and his Acceleration",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "f3802c4068472adbc2458344",
+      "confidence": "provisional",
+      "discoveredAt": "2026-11-09T23:25:52.396331+00:00",
+      "sourcePublishedAt": "2026-11-06T18:22:51+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xpk41z/an_ssstier_cmf_that_rivals_his_bt_card_is_here/",
+      "sourceType": "community-feed",
+      "title": "Potential speed finding",
+      "attributeIds": [
+        "speed"
+      ],
+      "excerpt": "​Stat-wise: both speed stats and ground passing can reach the 90 threshold.",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "7bc4a49a30ccd96d5ccee8e9",
+      "confidence": "provisional",
+      "discoveredAt": "2026-11-09T23:25:52.396331+00:00",
+      "sourcePublishedAt": "2026-11-06T20:12:32+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xpmvt3/all_special_id_shooting_animations_unlocked/",
+      "sourceType": "community-feed",
+      "title": "Potential curl finding",
+      "attributeIds": [
+        "curl"
+      ],
+      "excerpt": "… actual gameplay before, Ronaldinho's special Blitz Curler animation has a striking point further away from the body, allowing it",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "7ac7ff9ee7dd1a716a5f113a",
+      "confidence": "provisional",
+      "discoveredAt": "2026-11-09T23:25:52.396331+00:00",
+      "sourcePublishedAt": "2026-11-08T12:31:52+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xqxdg2/ronaldo_really_does_have_special_shots/",
+      "sourceType": "community-feed",
+      "title": "Potential speed finding",
+      "attributeIds": [
+        "speed"
+      ],
+      "excerpt": "… should evaluate the performance of a shooting animation based on three factors: wind-up speed (pre-shot delay), recovery time (post-shot",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "3818fe7215df3de0be429786",
+      "confidence": "provisional",
+      "discoveredAt": "2026-11-09T23:25:52.396331+00:00",
+      "sourcePublishedAt": "2026-11-08T17:07:37+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xr3cm8/i_cant_believe_they_gave_the_new_playstyles/",
+      "sourceType": "community-feed",
+      "title": "Potential speed finding",
+      "attributeIds": [
+        "speed"
+      ],
+      "excerpt": "… ➡️ Gear 4 Pass Disruptor Lowers distance threshold for triggering defensive positioning speed boosts Gear 3 ➡️ Gear 4",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
     {
       "id": "1171e2861b7dd705922fd930",
       "confidence": "provisional",
