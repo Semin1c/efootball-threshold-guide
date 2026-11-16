@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastCheck": "2026-11-09T23:25:52.396331+00:00",
-  "lastAddition": "2026-11-09T23:25:52.396331+00:00",
+  "lastCheck": "2026-11-16T23:23:05.149533+00:00",
+  "lastAddition": "2026-11-16T23:23:05.149533+00:00",
   "health": "partial",
   "checks": [
     {
@@ -32,26 +32,26 @@
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/6025",
-      "url": "https://www.konami.com/efootball/en/topic/news/6025",
+      "source": "https://www.konami.com/efootball/en/topic/news/6027",
+      "url": "https://www.konami.com/efootball/en/topic/news/6027",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/6077",
-      "url": "https://www.konami.com/efootball/en/topic/news/6077",
+      "source": "https://www.konami.com/efootball/en/topic/news/6028",
+      "url": "https://www.konami.com/efootball/en/topic/news/6028",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/6078",
-      "url": "https://www.konami.com/efootball/en/topic/news/6078",
+      "source": "https://www.konami.com/efootball/en/topic/news/6102",
+      "url": "https://www.konami.com/efootball/en/topic/news/6102",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
     {
-      "source": "https://www.konami.com/efootball/en/topic/news/6087",
-      "url": "https://www.konami.com/efootball/en/topic/news/6087",
+      "source": "https://www.konami.com/efootball/en/topic/news/6122",
+      "url": "https://www.konami.com/efootball/en/topic/news/6122",
       "ok": false,
       "error": "Source blocked or extraction incomplete"
     },
@@ -105,6 +105,75 @@
     }
   ],
   "claims": [
+    {
+      "id": "d17ea4384454f91adf65f6db",
+      "confidence": "provisional",
+      "discoveredAt": "2026-11-16T23:23:05.149533+00:00",
+      "sourcePublishedAt": "2026-11-12T18:06:16+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xujy1x/the_best_player_playstyle_analysis_on_the_entire/",
+      "sourceType": "community-feed",
+      "title": "Potential speed, stamina finding",
+      "attributeIds": [
+        "speed",
+        "stamina"
+      ],
+      "excerpt": "… Gear 4 Pass Disruptor Lowers the distance threshold required to trigger a gear upshift in defensive positioning Gear 3",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "2cff6846ab812934e1ed100e",
+      "confidence": "provisional",
+      "discoveredAt": "2026-11-16T23:23:05.149533+00:00",
+      "sourcePublishedAt": "2026-11-13T16:19:41+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xvc5y9/ibrahimovićs_exclusive_animation_confirmed/",
+      "sourceType": "community-feed",
+      "title": "Potential heading finding",
+      "attributeIds": [
+        "heading"
+      ],
+      "excerpt": "3️⃣ A heading animation must not have triggered, and the ball must drop onto his shoulder (this is the",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "8b26871e0e3223a86ddc5b27",
+      "confidence": "provisional",
+      "discoveredAt": "2026-11-16T23:23:05.149533+00:00",
+      "sourcePublishedAt": "2026-11-14T20:50:09+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xwcxy0/complete_player_skills_guide_breakdown/",
+      "sourceType": "community-feed",
+      "title": "Potential stamina finding",
+      "attributeIds": [
+        "stamina"
+      ],
+      "excerpt": "… Spirit delays that teammate's fatigue-induced movement downgrade threshold from 60% stamina consumed to 85%, while the related distance modifier",
+      "engineMention": null,
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
+    {
+      "id": "bf156d7658a7d41d96c31225",
+      "confidence": "provisional",
+      "discoveredAt": "2026-11-16T23:23:05.149533+00:00",
+      "sourcePublishedAt": "2026-11-15T09:49:04+00:00",
+      "sourceUrl": "https://www.reddit.com/r/Amadeusz/comments/1xwrmjx/new_skill_momentum_dribbling_mirrored_version/",
+      "sourceType": "community-feed",
+      "title": "Potential physical contact finding",
+      "attributeIds": [
+        "physical-contact"
+      ],
+      "excerpt": "Beast Drive [Unreleased] Includes extra physical contact animations to push opponents away while in possession.",
+      "engineMention": "v6.1",
+      "platform": "Not independently verified",
+      "method": "Automatic text matching; not independent gameplay testing",
+      "supersedes": null
+    },
     {
       "id": "392b325f18920273d76a8aae",
       "confidence": "provisional",
